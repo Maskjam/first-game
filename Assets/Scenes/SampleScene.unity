@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 1075778452}
   - component: {fileID: 1075778451}
   - component: {fileID: 1075778450}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793896878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.97, y: 1.49, z: 3.97}
+  m_LocalPosition: {x: 3.97, y: 1.14, z: 3.97}
   m_LocalScale: {x: 0.9939, y: 1, z: 1}
   m_Children:
   - {fileID: 2098514225}
@@ -594,11 +594,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  groundDrag: 0
-  playerHeight: 0
+  groundDrag: 5
+  jumpForce: 10
+  jumpCooldown: 0.25
+  airMultiplier: 0.4
+  jumpKey: 32
+  playerHeight: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   orientation: {fileID: 52022315}
 --- !u!1 &2098514220
 GameObject:
