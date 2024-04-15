@@ -11,6 +11,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     public float sprintSpeed;
 
     public float groundDrag;
+    public float wallrunSpeed;
 
     [Header("Jumping")]
     public float jumpForce;
@@ -53,9 +54,12 @@ public class PlayerMovementAdvanced : MonoBehaviour
     {
         walking,
         sprinting,
+        wallrunning,
         crouching,
         air
     }
+
+    public bool wallrunning;
 
     private void Start()
     {
@@ -119,6 +123,12 @@ public class PlayerMovementAdvanced : MonoBehaviour
 
     private void StateHandler()
     {
+
+        // Mode - wallrunning
+        if (wallrunning)
+        {
+            state = MovementState.wallrunning;
+        }
         // Mode - Crouching
         if (Input.GetKey(crouchKey))
         {
