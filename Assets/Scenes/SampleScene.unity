@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 287479645}
   - component: {fileID: 287479644}
   - component: {fileID: 287479643}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,6 +732,7 @@ GameObject:
   - component: {fileID: 1793896880}
   - component: {fileID: 1793896879}
   - component: {fileID: 1793896881}
+  - component: {fileID: 1793896882}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -788,7 +789,7 @@ MonoBehaviour:
   sprintSpeed: 10
   groundDrag: 5
   wallrunSpeed: 0
-  jumpForce: 12
+  jumpForce: 8
   jumpCooldown: 0.25
   airMultiplier: 0.4
   crouchSpeed: 3.5
@@ -804,6 +805,32 @@ MonoBehaviour:
   orientation: {fileID: 52022315}
   state: 0
   wallrunning: 0
+--- !u!114 &1793896882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793896878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9eb16387bbf4b36974be68960ff1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 1024
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  wallRunForce: 200
+  wallClimbSpeed: 3
+  maxWallRunTime: 1.5
+  upwardsRunKey: 304
+  downwardsRunKey: 306
+  wallCheckDistance: 0.7
+  minJumpHeight: 2
+  orientation: {fileID: 52022315}
 --- !u!1 &1796070353
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +843,7 @@ GameObject:
   - component: {fileID: 1796070357}
   - component: {fileID: 1796070356}
   - component: {fileID: 1796070355}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
